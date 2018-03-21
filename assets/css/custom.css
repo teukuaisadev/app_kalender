@@ -1,0 +1,206 @@
+    .app-title{
+        text-transform: uppercase;
+    }
+    
+    .tag-table{
+        padding: 10px; 
+        margin: 0 auto 30px;
+        font-size: 24px; 
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+    }
+    
+    .tag-table.same-height{
+        min-height: 315px;
+    }
+    
+    .tag-table, .tag-th, .tag-td{
+        border: 1px solid black;
+    }
+    
+    .tag-tbody{
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+    
+    .tag-tr{
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+    
+    .tag-th{
+        font-weight: bold;
+        background: #B2DFDB;
+        font-size: medium;
+        text-align: center;
+    }
+    
+    .tag-td, .tag-th{
+        display: table-cell;
+        vertical-align: inherit;
+        width: 50px;
+        max-width: 50px;
+    }
+
+    .tag-td:hover{
+        cursor: pointer;
+    }    
+    
+    .Bulan{
+        font-size: 32px;
+        font-weight: bold;
+        background: #E1BEE7;
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .day{
+        text-align: center; 
+        padding:3px;
+    }
+
+    .currentday{
+        text-align: center; 
+        background-color: yellow;
+    }
+
+    .specialdate{
+        text-align: center; 
+        background-color: cyan;
+    }
+
+    a:link, a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .holiday{
+        text-align: center;
+    }
+    
+    .tag-td.holiday, .holiday>a{
+        color: rgb(255, 17, 0) !important;
+    }
+    
+    .birthday{
+        text-align: center; 
+        background-color: rgb(255, 17, 0);
+    }
+    
+    .tag-td.birthday, .birthday>a{
+        color: #FFF !important;
+    }
+
+    .keterangan{
+        width: 35px;
+        max-width: 35px;
+        font-size: 12px;
+        text-align: left !important;
+        padding-left: 5px;
+        font-weight: bold;
+    }
+    
+    .keterangan.same-width{
+        width: 150px !important;
+        max-width: 150px !important;
+    }
+
+    input.search{
+        width: 200px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('./../images/searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    
+    input.search:focus{
+        width: 100%;
+        border-color: rgb(65, 80, 167);
+    }
+
+    .alert h4{
+        margin-bottom: 0;
+    }
+
+    #search-results-table td:hover, #event-list-table td:hover{
+        cursor: pointer;
+    }
+
+    .edit{
+        color: rgb(7, 30, 94);
+    }
+    
+    .save{
+        color: rgb(17, 94, 7);
+    }
+    
+    .cancel{
+        color: rgb(219, 63, 63);
+    }
+    
+    .delete{
+        color: rgb(161, 8, 8);
+    }
+
+    .initial-loading{
+        margin: 20px 0;
+        font-size: 20px;
+    }
+
+    .close.popup{
+        font-size: 30px;
+    }
+
+    .btn-add-event{
+        float: right;
+    }
+    
+    .btn-add-event:hover{
+        color: orangered;
+    }
+
+    .popup-notice{
+        display: inline-block;
+    }
+
+    .mydatepicker{
+        border: 0;
+        width: 100%;
+    }
+
+    .mydatepicker:focus{
+        background: #EEEEEE;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .mydatepicker:hover{
+        cursor: pointer;
+    }
+
+    .saving-loader{
+        width: 15px;
+        height: 15px;
+        margin-bottom: 2px;
+        margin-right: 5px;
+    }
+
+    #saving-loader{
+        display: none;
+    }
+
+    #notification{
+        font-size: 15px;
+    }
