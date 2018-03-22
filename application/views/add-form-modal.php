@@ -20,7 +20,7 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                             <select class="form-control" id="tahun-lahir" name="tahun_lahir" required>
                                 <option value="">&mdash; Pilih Tahun Lahir &mdash;</option>
-                                <?php $i=date('Y')-10; for($i; $i>=1900; $i--): ?>
+                                <?php $now=date('Y'); $i=$now-10; for($i; $i>=($now-88); $i--): ?>
                                     <option value="<?=$i?>"><?=$i?></option>
                                 <?php endfor; ?>
                             </select>
