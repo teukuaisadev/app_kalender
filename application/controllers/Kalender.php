@@ -24,28 +24,31 @@ class Kalender extends CI_Controller {
             );
         
             $this->load->view('theme', $data);
-            #$this->load->view('dialog-example');
         endif;
     }
 
     public function load_default(){
-        $d = array(
-            'januari' => $this->_bikin_kalender(1,2018),
-            'februari' => $this->_bikin_kalender(2,2018),
-            'maret' => $this->_bikin_kalender(3,2018),
-            'april' => $this->_bikin_kalender(4,2018),
-            'mei' => $this->_bikin_kalender(5,2018),
-            'juni' => $this->_bikin_kalender(6,2018),
-            'juli' => $this->_bikin_kalender(7,2018),
-            'agustus' => $this->_bikin_kalender(8,2018),
-            'september' => $this->_bikin_kalender(9,2018),
-            'oktober' => $this->_bikin_kalender(10,2018),
-            'november' => $this->_bikin_kalender(11,2018),
-            'desember' => $this->_bikin_kalender(12,2018),
-        );
-        
-        $view =  $this->load->view('default_content', $d, TRUE);
-        print $view;
+        if($this->input->is_ajax_request()):
+			$d = array(
+				'januari' => $this->_bikin_kalender(1,2018),
+				'februari' => $this->_bikin_kalender(2,2018),
+				'maret' => $this->_bikin_kalender(3,2018),
+				'april' => $this->_bikin_kalender(4,2018),
+				'mei' => $this->_bikin_kalender(5,2018),
+				'juni' => $this->_bikin_kalender(6,2018),
+				'juli' => $this->_bikin_kalender(7,2018),
+				'agustus' => $this->_bikin_kalender(8,2018),
+				'september' => $this->_bikin_kalender(9,2018),
+				'oktober' => $this->_bikin_kalender(10,2018),
+				'november' => $this->_bikin_kalender(11,2018),
+				'desember' => $this->_bikin_kalender(12,2018),
+			);
+			$view =  $this->load->view('default_content', $d, TRUE);
+			
+			print $view;
+		else:
+            show404();
+        endif;
     }
 
     public function get_event_list(){

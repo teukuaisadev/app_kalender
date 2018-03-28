@@ -39,7 +39,7 @@ class Kalender_model extends CI_Model{
 			$res = $q->result_array();
 			return $res;
 		} else {
-			return NULL;
+			return array();
 		}
 	}
 	
